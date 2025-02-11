@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="350.0" prefWidth="370.0"
+          xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8"
+          fx:controller="com.juanpascual.messagesfx.controllers.LoginController">
+    <columnConstraints>
+        <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" maxWidth="215.0" minWidth="10.0" prefWidth="136.0"/>
+        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" maxWidth="305.0" minWidth="10.0" prefWidth="305.0"/>
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES"/>
+    </rowConstraints>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Login" textAlignment="CENTER" GridPane.columnSpan="2"
+          GridPane.halignment="CENTER" GridPane.valignment="CENTER">
+        <font>
+          <Font name="System Bold" size="40.0"/>
+        </font>
+        <GridPane.margin>
+          <Insets top="20.0"/>
+        </GridPane.margin>
+    </Text>
+    <TextField fx:id="userTextField" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Username" GridPane.columnIndex="1"
+               GridPane.rowIndex="2">
+        <GridPane.margin>
+          <Insets right="20.0"/>
+        </GridPane.margin>
+    </TextField>
+    <PasswordField fx:id="passPassField" maxHeight="-Infinity" maxWidth="-Infinity" promptText="Password" GridPane.columnIndex="1"
+                   GridPane.rowIndex="3">
+        <GridPane.margin>
+          <Insets right="20.0"/>
+        </GridPane.margin>
+    </PasswordField>
+    <Text fx:id="errorText" fill="RED" strokeType="OUTSIDE" strokeWidth="0.0" text="User or password incorrect"
+          visible="false" GridPane.rowIndex="4">
+        <GridPane.margin>
+          <Insets left="20.0"/>
+        </GridPane.margin>
+    </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="User :" GridPane.rowIndex="2">
+        <GridPane.margin>
+          <Insets left="20.0"/>
+        </GridPane.margin>
+    </Text>
+    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Password :" GridPane.rowIndex="3">
+        <GridPane.margin>
+          <Insets left="20.0"/>
+        </GridPane.margin>
+    </Text>
+    <Button mnemonicParsing="false" onAction="#onLoginClick" text="Login" GridPane.columnSpan="2"
+            GridPane.halignment="CENTER" GridPane.rowIndex="5" GridPane.valignment="CENTER"/>
+    <Hyperlink onAction="#onRegisterClick" text="I dont't have an account yet" GridPane.columnSpan="2"
+               GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+        <GridPane.margin>
+          <Insets/>
+        </GridPane.margin>
+    </Hyperlink>
+</GridPane>
